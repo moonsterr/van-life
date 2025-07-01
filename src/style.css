@@ -102,14 +102,6 @@ footer {
   color: #7b7876;
 }
 
-@media (max-width: 550px) {
-  .homeHero {
-    h1 {
-      font-size: 2rem;
-    }
-  }
-}
-
 .aboutHero {
   /* padding-inline: 23px; */
   padding-block: 0px 60px;
@@ -164,24 +156,172 @@ footer {
     font-weight: 700;
     font-size: 1.5rem;
   }
+}
+.about-modal-btn {
+  background-color: #161616;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
 
-  &-btn {
-    background-color: #161616;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.1s ease-in-out;
-
-    &:hover {
-      transform: translate(1px, 1px);
-    }
+  &:hover {
+    transform: translate(1px, 1px);
   }
 }
 
 .under-img {
   padding-inline: 27px;
+}
+
+.vanHero {
+  background-color: #fff7ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.van-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+  .van-filter {
+    background-color: #ffead0;
+    width: 70px;
+    padding: 10px 0;
+    color: #888;
+    border-radius: 5px;
+    border: none;
+  }
+}
+
+.van-cards-container {
+  display: grid;
+  max-width: 1000px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.van-card {
+  max-width: 300px;
+}
+.van-image-holder {
+  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
+}
+.van-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.van-type {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+}
+.simple {
+  background-color: #ff8c38;
+}
+
+.luxury {
+  background-color: #161616;
+}
+
+.rugged {
+  background-color: #0f5c57;
+}
+.van-detail-container {
+  padding: 27px;
+}
+
+.van-detail-container .back-button {
+  color: black;
+  text-decoration: none;
+}
+
+.van-detail-container .back-button:visited {
+}
+
+.van-detail-container .back-button span {
+  text-decoration: underline;
+}
+
+.van-detail {
+  display: flex;
+  flex-direction: column;
+  color: #161616;
+  max-width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  /* align-items: center; */
+  max-width: 50%;
+  a {
+    color: black;
+  }
+}
+
+.van-detail img {
+  border-radius: 5px;
+  margin-block: 47px;
+  max-width: 100%;
+}
+
+.van-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.van-detail > i {
+  align-self: flex-start;
+}
+
+.van-detail .van-price {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.van-detail .van-price span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  max-width: 200px;
+}
+
+.van-detail .link-button {
+  background-color: #ff8c38;
+  color: white;
+  font-size: 1.125rem;
+  border: 0;
+  width: 100%;
+}
+@media (max-width: 550px) {
+  .homeHero {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .van-detail {
+    max-width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .van-detail {
+    max-width: 100%;
+  }
 }
