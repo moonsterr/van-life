@@ -12,11 +12,13 @@ export default function Vans() {
       setLoading(true);
       try {
         const res = await fetch('api/vans');
-        const data = res.json();
-        setVanInfo(data.van);
+        console.log(res);
+        const data = await res.json();
+        console.log(data.vans);
+        setVanInfo(data.vans);
         setError(false);
       } catch (err) {
-        console.log(err);
+        console.log(1, err);
         setError(true);
       }
       setLoading(false);
