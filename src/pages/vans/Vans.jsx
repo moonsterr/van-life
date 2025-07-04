@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { getVans } from '../../../api';
 export default function Vans() {
   const [vanInfo, setVanInfo] = React.useState([]);
   const [searchParams] = useSearchParams();
@@ -12,8 +11,9 @@ export default function Vans() {
     async function getVanInfo() {
       setLoading(true);
       try {
-        const data = await getVans();
-        setVanInfo(data);
+        const res = await fetch('api/vans');
+        const data = res.json();
+        setVanInfo(data.van);
         setError(false);
       } catch (err) {
         console.log(err);
